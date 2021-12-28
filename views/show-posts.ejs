@@ -1,0 +1,57 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("components/head") %>
+  </head>
+  <body>
+    <%- include("components/nav") %>
+    <hr class="header-line">
+    
+    <div class="main">
+    
+      <ul>
+        <li><h2><%= post.title %></h2> <%= post.body %></li>
+      </ul>
+      
+      <hr class="header-line">
+      
+      <!-- 댓글 보여주기 -->
+      <% for(i=0; i<comments.length;i++) { %>
+        <li><%= comments[i].nickname %>
+          <% let adress=[]; %>
+          <% for (j=0; j<4; j++) { %>
+            <% adress +=  ( comments[i].ip[j] ) %>
+          <% } %>
+          
+          <% for (k=4; k<7; k++) { %>
+            <% adress += 'x' %>
+          <% } %>
+          <%= adress %>
+
+          <%= comments[i].body %></li>
+      <% } %>
+        
+      
+      
+      <!-- 댓글 쓰기 -->
+      <form method="post" action="/comments/">
+        <input name="post_id" value="<%= post.id %>">
+        <p><input name="nickname" placeholder="아이디"></p>
+        <p><input name="password" placeholder="비밀번호"></p>
+        <p><textarea name="body" placeholder="여기에 댓글을 작성해주세요"></textarea></p>
+        <input type="submit" value="작성">
+      </form>
+      
+    </div>
+    
+
+    
+    <%- include("components/footer") %>
+    
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+  </body>
+</html>
