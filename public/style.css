@@ -1,0 +1,99 @@
+body {
+  background: #f0f0f0;
+}
+
+/*this is header*/
+.Nav {
+  overflow: hidden;
+}
+
+.Nav .topNav{
+  margin-left:55%;
+}
+
+.Nav a {
+  float:left;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 17px;
+  text-decoration: none;
+  margin-left: 12px;
+}
+
+.Nav a:hover {
+  background-color: #4CAF50;
+  color: black;
+}
+
+.Nav input[type="text"] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 5px;
+  margin-left: 16px;
+  font-size: 17px;
+  margin-right: 5px;
+}
+
+.main .post .write a{
+  color:#FFF8DC;
+  background-color:#00008B;
+  text-decoration:none;
+  float:left;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 17px;
+  text-decoration: none;
+  margin-left: 12px;
+  border-radius: 4px;
+}
+
+.main .post .write a:hover {
+  background-color: #4CAF50;
+  color: black;
+}
+
+.header-line {
+  border: 0;
+  height: 2px;
+  background-color: #00FFFF;
+}
+
+/*this is footer*/
+.footer {
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:120%;
+}
+
+.footer .Site-map {
+  padding-left: 20%;
+}
+
+.footer .Site-menu {
+  padding-left: 18%;
+}
+
+.main {
+  width: 800px;
+  margin: 24px auto;
+  background: white;
+  box-shadow: 0 4px 8px lightgray;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.main h1 {
+  text-align: center;
+}
+
+.main .post {
+}
+
+.main .post > ul {
+  list-style: none;
+  padding-left: 0;
+}
