@@ -1,0 +1,38 @@
+<div class="pagination-container">
+  <div class="pagination">
+    
+    
+    <a href="?page=1">처음</a>
+    
+    <% if (page > 1) { %>
+      <a href="?page=<%= page - 1 %>">&laquo;</a>
+    <% } else { %>
+    
+    <% } %>
+    
+      
+    
+    <% if (page == 1) { %>
+    
+    
+      <% for (let i = 0; i < 5; i++) { %>
+        <a href="?page=<%= page + i %>" class="<% if (i == 0) { %>active<% } %>"><%= page + i %></a>
+      <% } %>
+    
+    <% } else if (page == 2) { %>
+    
+      <% for (let i = -1; i < 4; i++) { %>
+        <a href="?page=<%= page + i %>" class="<% if (i == 0) { %>active<% } %>"><%= page + i %></a>
+      <% } %>
+    
+    <% } else { %>
+    
+      <% for (let i = -2; i < 3; i++) { %>
+        <a href="?page=<%= page + i %>" class="<% if (i == 0) { %>active<% } %>"><%= page + i %></a>
+      <% } %>
+    
+    <% } %>
+      
+    <a href="?page=<%= page + 1 %>">&raquo;</a>
+  </div>
+</div>
