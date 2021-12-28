@@ -1,0 +1,25 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("components/head") %>
+    <title>Welcome to Glitch!</title>
+  </head>
+  <body>
+    <%- include("components/nav") %>
+    <hr class="header-line">
+  
+    <div class="main">
+      <h1>글쓰기</h1>
+      <form method="post" action="/posts/">
+        <p>게시판: <input name="board" value="<%= board %>" readonly placeholder="전체 글쓰기"></p>
+        <p>제목: <input name="title"></p>
+        <p>내용: <textarea name="body"></textarea></p>
+        <input type="submit" value="글쓰기">
+      </form>
+    </div>
+    
+    <%- include("components/footer") %>
+  </body>
+</html>
